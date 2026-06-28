@@ -1,0 +1,36 @@
+html { background: #111; }
+body { 
+    background: #ddd;
+    width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+
+
+h1 { 
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+ }
+
+h2 { 
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h3 { 
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
