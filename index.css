@@ -72,6 +72,17 @@ body{
   padding-top:4px;
 }
 
+.text-card h2 a {
+  color: var(--text);
+}
+.text-card h2 a:visited {
+  color: var(--text);
+}
+.text-card h2 a:hover {
+  color: var(--muted);
+}
+
+
 .tag{
   margin:0 0 10px;
   font-size:13px;
@@ -92,7 +103,6 @@ h2{
   font-size:clamp(1.8rem, 2.5vw, 3rem);
 }
 
-h2 a,
 
 .content{
   margin:0 0 18px;
