@@ -92,6 +92,8 @@ h2{
   font-size:clamp(1.8rem, 2.5vw, 3rem);
 }
 
+h2 a,
+
 .content{
   margin:0 0 18px;
   color:var(--muted);
