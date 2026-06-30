@@ -52,18 +52,6 @@ Your post content in Markdown...
 
 ---
 
-## Running Locally (Optional)
-
-Requires Ruby + Bundler.
-
-```bash
-gem install bundler jekyll
-bundle exec jekyll serve
-# Open http://localhost:4000
-```
-
----
-
 ## Pages
 
 | URL | Description |
