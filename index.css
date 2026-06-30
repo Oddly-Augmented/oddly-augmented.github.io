@@ -47,11 +47,13 @@ body{
   font-weight:600;
 }
 
-.page{
-  width:min(100%, var(--max));
-  margin:40px auto 80px;
-  padding:0 320px;
+
+.page {
+  width: min(100%, var(--max-width));
+  margin: 40px auto 80px;
+  padding: 0 32px;
 }
+
 
 .image-text-card{
   display:grid;
