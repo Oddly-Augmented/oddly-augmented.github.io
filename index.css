@@ -74,12 +74,15 @@ body{
 
 .text-card h2 a {
   color: var(--text);
+  text-decoration: none;
 }
 .text-card h2 a:visited {
   color: var(--text);
+  text-decoration: none;
 }
 .text-card h2 a:hover {
   color: var(--muted);
+  text-decoration: none;
 }
 
 
