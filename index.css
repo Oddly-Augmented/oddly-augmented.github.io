@@ -45,20 +45,6 @@ body{
   justify-self:end;
 }
 
-.nav a,
-.brand{
-  color:var(--text);
-  text-decoration:none;
-  font-size:15px;
-  font-weight:600;
-}
-
-.brand{
-  font-family:"Noto Serif", serif;
-  font-size:20px;
-  letter-spacing:0.02em;
-}
-
 .nav a:hover,
 .brand:hover{
   opacity:.8;
