@@ -3,6 +3,12 @@ layout: default
 title: Home
 ---
 
+<section class="hero">
+  <p class="tag">Welcome</p>
+  <h1>Oddly Augmented</h1>
+  <p class="content">A personal blog for recipes, Art, and whatever else I'm into. New posts whenever inspiration hits.</p>
+</section>
+
 {% for post in site.posts limit:3 %}
 <section class="image-text-card">
   {% if post.image %}
