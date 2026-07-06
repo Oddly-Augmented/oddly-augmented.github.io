@@ -31,7 +31,7 @@ body{
 .nav{
   list-style:none;
   display:flex;
-  gap:32px;
+  gap:22px;
   margin:0;
   padding:0;
 }
@@ -46,7 +46,6 @@ body{
   font-size:18px;
   font-weight:600;
 }
-
 
 .page {
   width: min(100%, var(--max-width));
@@ -63,7 +62,7 @@ body{
   margin-bottom: 60px;
 }
 
-/* flip post. image to the right */
+/* reverse post. image to the right */
 .image-text-card.reverse{
   flex-direction: row-reverse;
 }
@@ -89,10 +88,18 @@ body{
   border-radius: var(--radius);
 }
 
+/* Equal columns for image and text posts*/
+.image-text-card:not(.image-hero) .image-card,
+.image-text-card:not(.image-hero) .text-card {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .image-card img{
+  width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit:cover;
-  margin-bottom:18px;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 
 .text-card{
@@ -111,7 +118,6 @@ body{
   color: var(--muted);
   text-decoration: none;
 }
-
 
 .tag{
   margin:0 0 10px;
@@ -132,7 +138,6 @@ h1{
 h2{
   font-size:clamp(1.8rem, 2.5vw, 3rem);
 }
-
 
 .content{
   margin:0 0 18px;
@@ -164,10 +169,10 @@ h2{
     justify-self:center;
   }
 
-  .hero-grid,
-  .post-grid{
-    grid-template-columns:1fr;
-    gap:28px;
+  .image-text-card,
+  .image-text-card.reverse {
+    flex-direction: column;
+    gap: 28px;
   }
 
   .page{
