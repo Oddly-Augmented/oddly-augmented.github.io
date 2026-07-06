@@ -4,10 +4,3 @@ baseurl: ""
 url: "https://oddly-augmented.github.io"
 
 permalink: /blog/:slug/
-
-plugins:
-  - jekyll-paginate
-
-paginate: 6
-paginate_path: "/blog/page:num/"
-
