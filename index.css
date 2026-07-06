@@ -140,7 +140,7 @@ body{
   width: 14px;
   height: 14px;
   opacity: 0.85;
-  filter: invert(1);  /* makes dark SVGs white — remove if your SVGs are already light */
+  filter: brightness(0) invert(1);
 }
 
 h1, h2{
