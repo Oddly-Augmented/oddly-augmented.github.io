@@ -20,17 +20,19 @@ title: Blog
   {% else %}
     {% assign layout_class = 'image-text-card' %}
   {% endif %}
-<section class="{{ layout_class }}">
-  {% if post.image and card_style != 'text-only' %}
-  <article class="image-card">
-    <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-  </article>
-  {% endif %}
-  <article class="text-card">
-    {% include tag.html category=post.category %}
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="content">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
-  </article>
-</section>
+
+  <section class="{{ layout_class }}">
+    {% if post.image and card_style != 'text-only' %}
+      <article class="image-card">
+        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+      </article>
+    {% endif %}
+
+    <article class="text-card">
+      {% include tag.html category=post.category %}
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="content">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
+    </article>
+  </section>
 {% endfor %}
