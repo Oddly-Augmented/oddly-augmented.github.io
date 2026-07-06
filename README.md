@@ -36,6 +36,8 @@ title: "Your Post Title"
 category: Recipes
 date: 2026-06-29
 image: /path-to-image.png
+card_style: auto (Post Formatting)
+excerpt: (optional) 
 ---
 
 Your post content in Markdown...
@@ -43,7 +45,7 @@ Your post content in Markdown...
 ### Post Format
 | Value       | Effect                                 |
 | ----------- | -------------------------------------- |
-| (omitted)   | Auto-alternates left/right by position |
+| auto        | Auto-alternates left/right by position |
 | image-left  | Always image on left                   |
 | image-right | Always image on right                  |
 | text-only   | No image shown                         |
