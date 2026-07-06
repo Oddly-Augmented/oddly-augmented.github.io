@@ -2,7 +2,7 @@
 
 A personal blog covering recipes, art, 3D modeling, and whatever else is on my mind. Built with plain HTML/CSS and Jekyll for post management, hosted on GitHub Pages.
 
-```
+
 ## Project Structure
 
 ```
