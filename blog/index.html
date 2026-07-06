@@ -3,8 +3,25 @@ layout: default
 title: Blog
 ---
 {% for post in site.posts %}
-<section class="image-text-card">
-  {% if post.image %}
+  {% assign card_style = post.card_style | default: 'auto' %}
+  {% if card_style == 'auto' %}
+    {% assign is_even = forloop.index | modulo: 2 %}
+    {% if is_even == 0 %}
+      {% assign layout_class = 'image-text-card reverse' %}
+    {% else %}
+      {% assign layout_class = 'image-text-card' %}
+    {% endif %}
+  {% elsif card_style == 'image-right' %}
+    {% assign layout_class = 'image-text-card reverse' %}
+  {% elsif card_style == 'text-only' %}
+    {% assign layout_class = 'image-text-card text-only' %}
+  {% elsif card_style == 'image-hero' %}
+    {% assign layout_class = 'image-text-card image-hero' %}
+  {% else %}
+    {% assign layout_class = 'image-text-card' %}
+  {% endif %}
+<section class="{{ layout_class }}">
+  {% if post.image and card_style != 'text-only' %}
   <article class="image-card">
     <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
   </article>
