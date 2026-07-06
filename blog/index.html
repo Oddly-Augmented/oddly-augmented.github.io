@@ -23,7 +23,7 @@ title: Blog
 <section class="{{ layout_class }}">
   {% if post.image and card_style != 'text-only' %}
   <article class="image-card">
-    <img src="{{ _images/post.image }}" alt="{{ post.title }}" loading="lazy">
+    <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
   </article>
   {% endif %}
   <article class="text-card">
