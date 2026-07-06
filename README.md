@@ -13,7 +13,8 @@ oddly-augmented.github.io/
 │   └── post.html        # Individual blog post wrapper
 ├── _posts/              # Blog posts as Markdown files
 │   └── YYYY-MM-DD-slug.md
-├── _images/
+├── images/
+│   └── image.image
 ├── blog/
 │   └── index.html       # Blog listing page
 ├── recipes/
@@ -51,6 +52,18 @@ Your post content in Markdown...
 | text-only   | No image shown                         |
 | image-hero  | Full-width image above text            |
 
+### Add images in posts
+In line markdown: 
+```
+![description of image](/images/your-image.jpg)
+```
+HTML with caption:
+```
+<figure>
+  <img src="/images/your-image.jpg" alt="description">
+  <figcaption>Your caption here</figcaption>
+</figure>
+```
 ---
 
 ## Pages
