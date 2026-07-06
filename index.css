@@ -139,10 +139,13 @@ body{
 .tag-icon {
   width: 14px;
   height: 14px;
-  opacity: 0.85;
+  display: block;
+  flex: 0 0 14px;
+  opacity: 1;
   filter: brightness(0) invert(1);
 }
 
+/* Images in markdown posts */
 .post-image {
   max-width: 650px;
   margin: 24px 0;
