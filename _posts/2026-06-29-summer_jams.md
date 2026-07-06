@@ -3,7 +3,7 @@ layout: post
 title: "Summer Flavors: Blueberry Jam Experiments"
 category: Recipes
 date: 2026-06-29
-image: /images/Jam on toast.jpg
+image: /images/Jam on toats.jpg
 card_style: auto
 ---
 
