@@ -3,7 +3,8 @@ layout: post
 title: "Summer Flavors: Blueberry Jam Experiments"
 category: Recipes
 date: 2026-06-29
-image: /Temp-Pic.png
+image: _images/Temp-Pic.png
+card_style: auto
 ---
 Fresh summer flavors — blueberry hibiscus and blueberry raspberry jams
 made to brighten toast, yogurt, and everything in between.

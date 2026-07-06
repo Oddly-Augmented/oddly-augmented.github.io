@@ -65,6 +65,7 @@ body{
 /* reverse post. image to the right */
 .image-text-card.reverse{
   flex-direction: row-reverse;
+  text-align: left;
 }
 
 /* Only text */
