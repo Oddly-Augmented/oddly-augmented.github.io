@@ -17,7 +17,7 @@ body{
 }
 
 .site-header{
-  padding:32px 48px 16px;
+  padding:44px 48px 24px;
 }
 
 .header-bar{
@@ -31,7 +31,7 @@ body{
 .nav{
   list-style:none;
   display:flex;
-  gap:22px;
+  gap:32px;
   margin:0;
   padding:0;
 }
@@ -43,7 +43,7 @@ body{
 .logo{
   color:var(--text);
   text-decoration:none;
-  font-size:15px;
+  font-size:18px;
   font-weight:600;
 }
 
