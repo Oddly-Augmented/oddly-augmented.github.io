@@ -56,10 +56,37 @@ body{
 
 
 .image-text-card{
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  display:flex;
+  flex-direction: row;
   gap:48px;
-  align-items:start;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+/* flip post. image to the right */
+.image-text-card.reverse{
+  flex-direction: row-reverse;
+}
+
+/* Only text */
+.image-text-card.text-only{
+  display: block;
+}
+
+/* full width image above text*/
+.image-text-card.image-hero{
+  flex-direction: column;
+}
+
+.image-text-card.image-hero .image-card{
+  width: 100%;
+}
+
+.image-text-card.image-hero .image-card img{
+  aspect-ratio: 16 / 6;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 
 .image-card img{
