@@ -1,0 +1,38 @@
+{% assign cat = include.category | downcase %}
+
+{% if cat == 'recipes' or cat == 'recipe' %}
+  {% assign tag_color = '#3a7d44' %}
+  {% assign tag_icon = '/images/icons/measuring-cup.svg' %}
+{% elsif cat == 'art' %}
+  {% assign tag_color = '#7b4fa6' %}
+  {% assign tag_icon = '/images/icons/brush.svg' %}
+{% elsif cat == 'blog' %}
+  {% assign tag_color = '#2e6ea6' %}
+  {% assign tag_icon = '/images/icons/journal.svg' %}
+{% elsif cat == 'photography' or cat == 'photo' %}
+  {% assign tag_color = '#b05a2f' %}
+  {% assign tag_icon = '/images/icons/camera.svg' %}
+{% elsif cat == 'code' or cat == 'coding' or cat == 'dev' %}
+  {% assign tag_color = '#2a7f7f' %}
+  {% assign tag_icon = '/images/icons/code.svg' %}
+{% elsif cat == '3d' %}
+  {% assign tag_color = '#c47a1e' %}
+  {% assign tag_icon = '/images/icons/badge-3d.svg' %}
+{% elsif cat == 'crypto' or cat == 'cryptocurrency' %}
+  {% assign tag_color = '#c9a227' %}
+  {% assign tag_icon = '/images/icons/bitcoin.svg' %}
+{% elsif cat == 'finance' or cat == 'stocks' %}
+  {% assign tag_color = '#3a6e3a' %}
+  {% assign tag_icon = '/images/icons/graph.svg' %}
+{% elsif cat == 'reading' or cat == 'books' %}
+  {% assign tag_color = '#5c4a8a' %}
+  {% assign tag_icon = '/images/icons/book.svg' %}
+{% else %}
+  {% assign tag_color = '#556070' %}
+  {% assign tag_icon = '/images/icons/tag.svg' %}
+{% endif %}
+
+<span class="post-tag" style="--tag-color: {{ tag_color }};">
+  <img src="{{ tag_icon }}" alt="" class="tag-icon">
+  {{ include.category }}
+</span>

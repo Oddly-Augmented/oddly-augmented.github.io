@@ -120,10 +120,27 @@ body{
   text-decoration: none;
 }
 
-.tag{
-  margin:0 0 10px;
-  font-size:13px;
-  color:var(--muted);
+.post-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px;
+  padding: 4px 10px 4px 6px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--tag-color) 18%, transparent);
+  color: var(--tag-color);
+  border: 1px solid color-mix(in srgb, var(--tag-color) 35%, transparent);
+}
+
+.tag-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.85;
+  filter: invert(1);  /* makes dark SVGs white — remove if your SVGs are already light */
 }
 
 h1, h2{
