@@ -1,3 +1,5 @@
+<!-- Wanted for the Tags to have icons but cant figure it out  -->
+
 {% assign cat = include.category | downcase %}
 
 {% if cat == 'recipes' or cat == 'recipe' %}
@@ -33,6 +35,11 @@
 {% endif %}
 
 <span class="post-tag" style="--tag-color: {{ tag_color }};">
-  <img src="{{ tag_icon }}" alt="" class="tag-icon">
   {{ include.category }}
 </span>
+
+<!-- Old code for tags with images(BROKEN) -->
+<!-- <span class="post-tag" style="--tag-color: {{ tag_color }};">
+  <img src="{{ tag_icon }}" alt="" class="tag-icon">
+  {{ include.category }}
+</span> -->

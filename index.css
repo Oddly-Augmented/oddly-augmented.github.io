@@ -122,9 +122,21 @@ body{
 
 /* Tags */
 .post-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--tag-color) 18%, transparent);
+  color: var(--tag-color);
+  border: 1px solid color-mix(in srgb, var(--tag-color) 35%, transparent);
+}
+/* Tags with Icon(BROKEN) */
+/* .post-tag {
+  display: inline-block;
   margin: 0 0 10px;
   padding: 4px 10px;
   border-radius: 999px;
@@ -143,7 +155,7 @@ body{
   display: block;
   flex-shrink: 0;
   opacity: 1;
-}
+} */
 
 /* Images in markdown posts */
 .post-image {
