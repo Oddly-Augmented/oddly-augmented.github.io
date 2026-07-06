@@ -120,6 +120,7 @@ body{
   text-decoration: none;
 }
 
+/* Tags */
 .post-tag {
   display: inline-flex;
   align-items: center;
@@ -142,7 +143,6 @@ body{
   display: block;
   flex-shrink: 0;
   opacity: 1;
-  filter: brightness(0) invert(1);
 }
 
 /* Images in markdown posts */
