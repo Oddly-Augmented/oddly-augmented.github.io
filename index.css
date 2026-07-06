@@ -143,6 +143,24 @@ body{
   filter: brightness(0) invert(1);
 }
 
+.post-image {
+  max-width: 650px;
+  margin: 24px 0;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.post-image figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
 h1, h2{
   margin:0 0 14px;
   font-family:"Noto Serif", serif;
