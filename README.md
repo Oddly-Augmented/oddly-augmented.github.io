@@ -54,13 +54,16 @@ Your post content in Markdown...
 
 ### Add images in posts
 In line markdown: 
+```
 ![description of image](/images/your-image.jpg)
+```
 HTML with caption:
+```
 <figure>
   <img src="/images/your-image.jpg" alt="description">
   <figcaption>Your caption here</figcaption>
 </figure>
-
+```
 ---
 
 ## Pages
