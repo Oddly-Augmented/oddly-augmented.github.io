@@ -1,6 +1,6 @@
 {% assign cat = include.category | downcase %}
 
-{% if cat == 'recipes' or cat == 'recipe' %}
+{% if cat == 'recipes' or cat == 'recipe' or cat== 'cooking' %}
   {% assign tag_color = '#3a7d44' %}
 {% elsif cat == 'art' %}
   {% assign tag_color = '#7b4fa6' %}
