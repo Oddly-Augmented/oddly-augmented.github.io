@@ -1,25 +1,67 @@
 {% assign cat = include.category | downcase %}
 
+<!-- Strawberry Red -->
 {% if cat == 'recipes' or cat == 'recipe' or cat== 'cooking' %}
-  {% assign tag_color = '#3a7d44' %}
+  {% assign tag_color = '#f94144' %}
+
+<!-- Pumpkin Spice -->
 {% elsif cat == 'art' %}
-  {% assign tag_color = '#7b4fa6' %}
+  {% assign tag_color = '#f3722c' %}
+
+<!-- Carrot Orange -->
 {% elsif cat == 'blog' %}
-  {% assign tag_color = '#2e6ea6' %}
+  {% assign tag_color = '#f8961e' %}
+
+<!-- Atomic Tangerine -->
 {% elsif cat == 'photography' or cat == 'photo' %}
-  {% assign tag_color = '#b05a2f' %}
+  {% assign tag_color = '#f9844a' %}
+
+<!-- Tuscan Sun -->
 {% elsif cat == 'code' or cat == 'coding' or cat == 'dev' %}
-  {% assign tag_color = '#2a7f7f' %}
+  {% assign tag_color = '#f9c74f' %}
+
+<!-- Willow Green -->
 {% elsif cat == '3d' or cat == 'blender' %}
-  {% assign tag_color = '#c47a1e' %}
+  {% assign tag_color = '#90be6d' %}
+
+<!-- Seaweed -->
 {% elsif cat == 'crypto' or cat == 'cryptocurrency' %}
-  {% assign tag_color = '#c9a227' %}
+  {% assign tag_color = '#43aa8b' %}
+
+<!-- Dark Cyan -->
 {% elsif cat == 'finance' or cat == 'stocks' %}
-  {% assign tag_color = '#3a6e3a' %}
+  {% assign tag_color = '#4d908e' %}
+
+<!-- Blue Slate -->
 {% elsif cat == 'reading' or cat == 'books' %}
-  {% assign tag_color = '#5c4a8a' %}
+  {% assign tag_color = '#577590' %}
+
+          <!-- UNUSED -->
+          
+  <!-- Cerulean -->
+  {# {% elsif cat == 'TEMP1' %}
+    {% assign tag_color = '#277da1' %}
+
+    <!-- Royal Amethyst (Purple) -->
+  {% elsif cat == 'TEMP2' %}
+    {% assign tag_color = '#7209b7' %}
+    
+  <!-- Lavender Dream (Light Purple) -->
+  {% elsif cat == 'TEMP3' %}
+    {% assign tag_color = '#9d4edd' %}
+
+  <!-- Neon Magenta (Vibrant Pink) -->
+  {% elsif cat == 'TEMP4' %}
+    {% assign tag_color = '#f72585' %}
+    
+  <!-- Rose Pink (Soft Pink) -->
+  {% elsif cat == 'TEMP5' %}
+    {% assign tag_color = '#ff70a6' %} #} 
+
+
+<!-- WHITE -->
 {% else %}
-  {% assign tag_color = '#556070' %}
+  {% assign tag_color = '#FFFFFF' %}
 {% endif %}
 
 <span class="post-tag" style="--tag-color: {{ tag_color }};">
