@@ -1,8 +1,7 @@
 :root{
     --bg: #151719;
-    --muted: #017171;
+    --muted: #6a7987;
     --text: #ffffff;
-    --glass: rgba(255,255,255,0.04);
     --radius: 10px;
     --max-width: 1100px;
 }
