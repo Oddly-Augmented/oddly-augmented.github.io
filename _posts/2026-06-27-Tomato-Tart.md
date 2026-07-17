@@ -7,7 +7,6 @@ image: /images/Tomato Tart.jpg
 card_style: auto
 excerpt: "A flaky puff pastry tart topped with fresh mozzarella, heirloom tomato, and marinated zucchini."
 ---
----
 <figure class="post-image">
   <img src="/images/Tomato Tart.jpg" alt="A Tomato Tart">
   <figcaption>Summer Menu 2026</figcaption>
