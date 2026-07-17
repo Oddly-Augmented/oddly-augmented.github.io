@@ -4,7 +4,8 @@
     --bg-muted: #3C3E40;
     --muted: #6a7987;
     --text: #ffffff;
-    --text-muted: #c9cccf;
+    --text-muted: #C9CCCF;
+    --text-accent: #b2dae6;
     --radius: 10px;
     --max-width: 1100px;
 }
@@ -299,7 +300,7 @@ h6 {
 
 .content{
   margin:0 0 18px;
-  color:var(--muted);
+  color:var(--text-muted);
   line-height:1.5;
   max-width:46ch;
 }
@@ -307,7 +308,7 @@ h6 {
 .meta{
   margin:0;
   font-size:13px;
-  color:var(--muted);
+  color:var(--text-accent);
 }
 
 @media (max-width: 900px){
