@@ -21,7 +21,7 @@ Two years ago I was put in charge of making jams at work, and since then I've ma
 The experiment resulted in a wonderful jam and has opened up a whole new realm of possibilities.
 
 ### Blueberry Hibiscus Jam
-
+<div class="post-table">
 | Ingredients | Amount | Uint |
 |---|---|---|
 | Sugar | 2 | cups |
@@ -30,7 +30,7 @@ The experiment resulted in a wonderful jam and has opened up a whole new realm o
 | Fresh blueberries | 2 | pints |
 | Lemons | 2 | whole |
 | Pectin | 1 | tbsp |
-
+</div>
 1. Combine water and sugar in a medium pot and bring to a boil (5–10 minutes).
 2. Remove from heat, add hibiscus flowers, stir occasionally, and steep for 10 minutes.
 3. Strain out the flowers and wipe out the pot.

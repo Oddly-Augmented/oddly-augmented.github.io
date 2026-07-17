@@ -117,6 +117,8 @@ body{
   text-decoration: none;
 }
 
+
+/* --------POSTS-------- */
 /* Tags */
 .post-tag {
   display: inline-block;
@@ -149,6 +151,19 @@ body{
   margin-top: 8px;
   font-size: 14px;
   color: var(--muted);
+}
+
+/* Tables in markdown posts */
+.post-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.post-table th,
+.post-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
 
 h1, h2{
