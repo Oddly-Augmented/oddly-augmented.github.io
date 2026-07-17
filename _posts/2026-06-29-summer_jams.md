@@ -41,7 +41,6 @@ The experiment resulted in a wonderful jam and has opened up a whole new realm o
 8. *(If not canning)* Pour into a heat-resistant tray or cake pan and cool in the fridge.
 9. Transfer to a glass jar or container and enjoy within 2 weeks.
 
----
 
 ## A World of Possibilities
 
