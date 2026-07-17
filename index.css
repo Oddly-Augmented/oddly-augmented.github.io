@@ -166,13 +166,13 @@ body{
 
 .post-content th,
 .post-content td {
-  padding: 0.8rem 0.75rem;
+  padding: 0.6rem 0.75rem;
   text-align: left;
   white-space: nowrap;  
 }
 
 .post-content th {
-  font-weight: 700;
+  font-weight: 600;
   border-bottom: 1px solid ;
   color: #C8CBCE;
 }
@@ -189,12 +189,12 @@ body{
 .post-content th:nth-child(3),
 .post-content td:nth-child(2),
 .post-content td:nth-child(3) {
-  width: 80px;
+  width: 100px;
 }
 
 .post-content td:nth-child(2),
 .post-content td:nth-child(3) {
-  color: #96999C;
+  color: #c9cccf;
 }
 
 /* Lists in markdown posts */
