@@ -1,5 +1,6 @@
 :root{
     --bg: #151719;
+    --bg-accent: #1a414b;
     --muted: #6a7987;
     --text: #ffffff;
     --radius: 10px;
@@ -154,29 +155,29 @@ body{
 }
 
 /* Tables in markdown posts */
-.recipe-table table {
+.post-content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem;
 }
 
-.recipe-table th {
+.post-content th,
+.post-content td {
+  padding: 0.6rem 0.75rem;
   text-align: left;
-  padding: 0.5rem;
-  border-bottom: 2px solid var(--muted);
-}
-
-.recipe-table td {
-  padding: 0.5rem;
   border-bottom: 1px solid var(--muted);
 }
 
-.recipe-table tr:nth-child(even) td {
-  background-color: var(--muted);
+.post-content th {
+  font-weight: 600;
+}
+
+.post-content tr:nth-child(even) {
+  background: var(--bg-accent);
 }
 
 h1, h2{
-  margin:0 0 14px;
+  margin:0 0 16px;
   font-family:"Noto Serif", serif;
   line-height:1.05;
 }
@@ -188,6 +189,8 @@ h1{
 h2{
   font-size:clamp(1.8rem, 2.5vw, 3rem);
 }
+
+ul
 
 .content{
   margin:0 0 18px;
