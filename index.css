@@ -4,6 +4,7 @@
     --bg-muted: #3C3E40;
     --muted: #6a7987;
     --text: #ffffff;
+    --text-muted: #c9cccf;
     --radius: 10px;
     --max-width: 1100px;
 }
@@ -194,7 +195,7 @@ body{
 
 .post-content td:nth-child(2),
 .post-content td:nth-child(3) {
-  color: #c9cccf;
+  color: var(--text-muted);
 }
 
 /* Lists in markdown posts */
@@ -214,7 +215,7 @@ body{
 
 .post-content ol li::marker {
   font-weight: 700;
-  color: var(--bg-accent);
+  color: var(--text-muted);
 }
 
 .post-content ol li:last-child {
