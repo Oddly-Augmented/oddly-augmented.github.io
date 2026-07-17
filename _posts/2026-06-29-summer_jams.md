@@ -7,7 +7,7 @@ image: /images/Jam on toats.jpg
 card_style: auto
 ---
 
-Fresh summer flavors — Blueberry Hibiscus Jam made to brighten toast, yogurt, and everything in between.
+Fresh summer flavors — Blueberry Hibiscus Jam
 
 ---
 <figure class="post-image">
