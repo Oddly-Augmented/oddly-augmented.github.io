@@ -156,25 +156,37 @@ body{
 }
 
 /* Tables in markdown posts */
+/* Tables in markdown posts */
 .post-content table {
-  width: 60%;
+  width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0 1.5rem;
+  margin: 1.25rem 0 1.75rem;
+  font-size: 0.98rem;
 }
 
 .post-content th,
 .post-content td {
-  padding: 0.6rem 0.75rem;
+  padding: 0.8rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid var(--muted);
 }
 
 .post-content th {
-  font-weight: 600;
+  font-weight: 700;
+  border-bottom: 1px solid var(--bg-muted); 
+  color: #C8CBCE;                   
 }
 
-.post-content tr:nth-child(even) {
-  background: var(--bg-accent);
+.post-content td {
+  border-bottom: 1px solid #1e2224; 
+}
+
+.post-content tr:last-child td {
+  border-bottom: none;
+}
+
+.post-content td:nth-child(2),
+.post-content td:nth-child(3) {
+  color: #96999C; 
 }
 
 /* Lists in markdown posts */
@@ -182,7 +194,7 @@ body{
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   margin: 1.5rem 0;
   background: var(--bg-muted);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--bg-muted);
   border-radius: 12px;
 }
 
@@ -207,10 +219,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(2.4rem, 4vw, 4.3rem);
+  color: var(--text);
 }
 
 h2 {
   font-size: clamp(1.8rem, 2.5vw, 3rem);
+  color: color-mix(in srgb, color percentage, color percentage);
 }
 
 h3 {
