@@ -154,16 +154,25 @@ body{
 }
 
 /* Tables in markdown posts */
-.post-table table{
+.recipe-table table {
   width: 100%;
   border-collapse: collapse;
+  margin: 1rem 0;
 }
 
-.post-table th,
-.post-table td {
-  padding: 0.5rem;
-  border-bottom: 1px solid #ddd;
+.recipe-table th {
   text-align: left;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--muted);
+}
+
+.recipe-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+.recipe-table tr:nth-child(even) td {
+  background-color: var(--muted);
 }
 
 h1, h2{
