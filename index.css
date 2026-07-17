@@ -263,6 +263,7 @@ h1 {
 h2 {
   font-size: clamp(1.8rem, 2.5vw, 3rem);
   color: #DADDE2;
+  margin: .2em auto;
   width: fit-content;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #DADDE2;
