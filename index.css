@@ -1,7 +1,7 @@
 :root{
     --bg: #151719;
     --bg-accent: #1a414b;
-    --bg-muted: #32353c;
+    --bg-muted: #3C3E40;
     --muted: #6a7987;
     --text: #ffffff;
     --radius: 10px;
@@ -156,9 +156,9 @@ body{
 }
 
 /* Tables in markdown posts */
-/* Tables in markdown posts */
+
 .post-content table {
-  width: 100%;
+  width: auto;           /* shrinks to fit content */
   border-collapse: collapse;
   margin: 1.25rem 0 1.75rem;
   font-size: 0.98rem;
@@ -168,25 +168,33 @@ body{
 .post-content td {
   padding: 0.8rem 0.75rem;
   text-align: left;
+  white-space: nowrap;  
 }
 
 .post-content th {
   font-weight: 700;
-  border-bottom: 1px solid var(--bg-muted); 
-  color: #C8CBCE;                   
+  border-bottom: 1px solid ;
+  color: #C8CBCE;
 }
 
 .post-content td {
-  border-bottom: 1px solid #1e2224; 
+  border-bottom: 1px solid #1e2224;
 }
 
 .post-content tr:last-child td {
   border-bottom: none;
 }
 
+.post-content th:nth-child(2),
+.post-content th:nth-child(3),
 .post-content td:nth-child(2),
 .post-content td:nth-child(3) {
-  color: #96999C; 
+  width: 80px;
+}
+
+.post-content td:nth-child(2),
+.post-content td:nth-child(3) {
+  color: #96999C;
 }
 
 /* Lists in markdown posts */
@@ -212,35 +220,46 @@ body{
   margin-bottom: 0;
 }
 
-/* Heading formatting */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
 }
 
 h1 {
   font-size: clamp(2.4rem, 4vw, 4.3rem);
-  color: var(--text);
+  color: #ffffff;
 }
 
 h2 {
   font-size: clamp(1.8rem, 2.5vw, 3rem);
-  color: color-mix(in srgb, color percentage, color percentage);
+  color: #DADDE2;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #DADDE2;
 }
+
 
 h3 {
   font-size: clamp(1.45rem, 2vw, 2.2rem);
+  color: #B1BDC5;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #B1BDC5;
 }
+
 
 h4 {
   font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+  color: #889FA5;
 }
+
 
 h5 {
   font-size: clamp(1.05rem, 1.1vw, 1.3rem);
+  color: color-mix(in srgb, #889FA5 75%, #151719);
 }
 
 h6 {
   font-size: clamp(0.95rem, 1vw, 1.1rem);
+  color: color-mix(in srgb, #889FA5 50%, #151719);
 }
 
 
