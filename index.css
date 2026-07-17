@@ -243,10 +243,10 @@ body{
 
 /* Custom bullet */
 .post-content ul li::before {
-  content: "▻";
+  content: "✤";
   position: absolute;
   left: 0;
-  color: #889FA5;
+  color: var(--text-muted);
   font-weight: 700;
 }
 /* Headings */
