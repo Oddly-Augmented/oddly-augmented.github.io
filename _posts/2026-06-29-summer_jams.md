@@ -14,7 +14,8 @@ Fresh summer flavors — Blueberry Hibiscus Jam
   <img src="/images/Jam on toats.jpg" alt="Jam on toast with raspberries">
   <figcaption>Jam On Toast</figcaption>
 </figure>
-# Jam Experiments
+
+## Jam Experiments
 ---
 Two years ago I was put in charge of making jams at work, and since then I've made countless different types. This month I decided to try something new — I made a hibiscus simple syrup, reduced it down, then cooked blueberries directly in it. This process is similar to candying fruit, where the sugar syrup slowly draws out moisture and concentrates flavor.
 
