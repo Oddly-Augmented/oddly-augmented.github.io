@@ -201,6 +201,7 @@ body{
 .post-content ol {
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   margin: 1.5rem 0;
+  width: auto;
   background: var(--bg-muted);
   border: 1px solid var(--bg-muted);
   border-radius: 12px;
