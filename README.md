@@ -19,6 +19,10 @@ oddly-augmented.github.io/
 │   └── index.html       # Blog listing page
 ├── recipes/
 │   └── index.html       # Recipes page
+├── gallery/
+│   └── index.html       # Gallery page
+├── subscribe/
+│   └── index.html       # Subscribe page
 ├── index.html           # Homepage
 └── index.css            # Global styles
 
