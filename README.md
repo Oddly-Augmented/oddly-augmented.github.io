@@ -76,6 +76,6 @@ HTML with caption:
 |-----|-------------|
 | `/` | Homepage with featured posts |
 | `/blog/` | Full post listing |
-| `/recipes/` | Recipes section (coming soon) |
-| `/gallery/` | Gallery (coming soon) |
-| `/subscribe/` | Subscribe (coming soon) |
+| `/recipes/` | Recipes section (WIP) |
+| `/gallery/` | Gallery|
+| `/contact/` | Contact (TEMP)|
