@@ -258,7 +258,7 @@ body{
 }
 
 .contact-table {
-  width: 100%;
+  width: auto;
   border-collapse: collapse;
   margin: 1.25rem 0 2.5rem;
   font-size: 0.98rem;
@@ -374,6 +374,10 @@ h6 {
   color: color-mix(in srgb, #889FA5 50%, #151719);
 }
 
+caption{
+  font-size: clamp(1.45rem, 2vw, 2.2rem);
+  color: var(--text-accent);
+}
 
 
 .content{
