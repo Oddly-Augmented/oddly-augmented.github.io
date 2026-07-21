@@ -6,3 +6,14 @@ title: Gallery
 <section class="hero">
   <h1>Gallery</h1>
 </section>
+
+<div class="gallery-grid">
+  {% for image in site.data.images %}
+  <div class="gallery-item">
+    <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
+    <div class="gallery-overlay">
+      <span>{{ image.alt }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
