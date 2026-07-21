@@ -45,7 +45,7 @@ jobs:
               entries.append({"src": f"/images/{filename}", "alt": alt})
 
           with open("_data/images.yml", "w") as f:
-              f.write("# Auto-generated — do not edit manually\n")
+              f.write("# Auto-generated\n")
               yaml.dump(entries, f, allow_unicode=True, default_flow_style=False)
           EOF
 
