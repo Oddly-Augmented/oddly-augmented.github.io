@@ -1,0 +1,9 @@
+# Images to exclude from the gallery
+blacklist:
+  - Temp-Pic.png
+
+# Custom alt text per filename (optional — filename used if not listed)
+alt:
+  Blender lowpoly.png: "Low poly render made in Blender"
+  Jam on toats.jpg: "Jam on toast, a quick breakfast"
+  Tomato Tart.jpg: "Homemade tomato tart"
