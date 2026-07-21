@@ -281,6 +281,15 @@ body{
   border-bottom: none;
 }
 
+.contact-table a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.contact-table a:hover {
+  text-decoration: underline;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -327,6 +336,8 @@ body{
 .contact-form button:hover {
   background: var(--muted);
 }
+
+
 
 /* -------Headings--------- */
 h1, h2, h3, h4, h5, h6 {
@@ -375,7 +386,9 @@ h6 {
 }
 
 caption{
-  font-size: clamp(1.45rem, 2vw, 2.2rem);
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  width: fit-content;
+  text-align: left;
   color: var(--text-accent);
 }
 
