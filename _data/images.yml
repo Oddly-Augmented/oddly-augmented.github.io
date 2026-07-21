@@ -1,9 +1,15 @@
-# Auto-generated
-- src: /images/Blender lowpoly.png
-  alt: Blender lowpoly
-- src: /images/Jam on toats.jpg
-  alt: Jam on toats
-- src: /images/Tomato Tart.jpg
-  alt: Tomato Tart
-- src: /images/Temp-Pic.png
-  alt: Temp-Pic
+# Auto-generated — do not edit manually
+- alt: Low poly render made in Blender
+  src: /images/Blender lowpoly.png
+- alt: Branzino with tomato beurre blanc, French pico de gallo, and crispy leek-crusted
+    sunchokes
+  src: /images/Brozeno and Tomato.jpg
+- alt: Cheese board with fruit, nuts and jams
+  src: /images/Chese Board.jpg
+- alt: Confit chicken leg served with a wild mushrooms, pommes purée and rich port
+    sauce
+  src: /images/Chicken.jpg
+- alt: Jam on toast, a quick breakfast
+  src: /images/Jam on toats.jpg
+- alt: Homemade tomato tart
+  src: /images/Tomato Tart.jpg
