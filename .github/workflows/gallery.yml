@@ -15,7 +15,7 @@ jobs:
 
       - name: Generate images.yml
         run: |
-          echo "# Auto-generated — do not edit manually" > _data/images.yml
+          echo "# Auto-generated" > _data/images.yml
           for file in images/*; do
             filename=$(basename "$file")
             name="${filename%.*}"
