@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'images/**'
+      - '_data/gallery-config.yml'
 
 jobs:
   generate:
@@ -13,15 +14,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
       - name: Generate images.yml
         run: |
-          echo "# Auto-generated" > _data/images.yml
-          for file in images/*; do
-            filename=$(basename "$file")
-            name="${filename%.*}"
-            echo "- src: /$file" >> _data/images.yml
-            echo "  alt: $name" >> _data/images.yml
-          done
+          python3 << 'EOF'
+          import os, yaml
+
+          config_path = "_data/gallery-config.yml"
+          config = {}
+          if os.path.exists(config_path):
+              with open(config_path) as f:
+                  config = yaml.safe_load(f) or {}
+
+          blacklist = config.get("blacklist", [])
+          alt_map   = config.get("alt", {})
+
+          entries = []
+          for filename in sorted(os.listdir("images")):
+              if filename in blacklist:
+                  continue
+              name = os.path.splitext(filename)[0]
+              alt  = alt_map.get(filename, name)
+              entries.append({"src": f"/images/{filename}", "alt": alt})
+
+          with open("_data/images.yml", "w") as f:
+              f.write("# Auto-generated — do not edit manually\n")
+              yaml.dump(entries, f, allow_unicode=True, default_flow_style=False)
+          EOF
 
       - name: Commit and push
         run: |
