@@ -250,7 +250,85 @@ body{
   color: var(--text-muted);
   font-weight: 700;
 }
-/* Headings */
+
+
+/* ------CONTACT------- */
+.contact-section {
+  max-width: 700px;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0 2.5rem;
+  font-size: 0.98rem;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--bg-muted);
+}
+
+.contact-table th {
+  font-weight: 600;
+  color: var(--text-accent);
+  border-bottom: 1px solid var(--muted);
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+.contact-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.contact-form input {
+  padding: 10px 14px;
+  background: var(--bg-muted);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.contact-form input:focus {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 10px 24px;
+  background: var(--bg-accent);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: var(--muted);
+}
+
+/* -------Headings--------- */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
 }

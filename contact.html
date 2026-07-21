@@ -7,3 +7,38 @@ title: Contact
   <h1>Contact</h1>
   <p>Have a question or just want to say hi? Fill out the form below.</p>
 </section>
+
+<section class="contact-section">
+
+  <h2>Ways to Reach Me</h2>
+  <table class="contact-table">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GitHub</td>
+        <td>@Oddly-Augmented</td>
+      </tr>
+      <tr>
+        <td>Form Below</td>
+        <td>This page</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Send a Message</h2>
+  <form class="contact-form" method="POST" action="welcome.php">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+</section>
