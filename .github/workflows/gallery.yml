@@ -1,0 +1,32 @@
+name: Generate Gallery Data
+
+on:
+  push:
+    paths:
+      - 'images/**'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate images.yml
+        run: |
+          echo "# Auto-generated — do not edit manually" > _data/images.yml
+          for file in images/*; do
+            filename=$(basename "$file")
+            name="${filename%.*}"
+            echo "- src: /$file" >> _data/images.yml
+            echo "  alt: $name" >> _data/images.yml
+          done
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/images.yml
+          git diff --staged --quiet || git commit -m "Auto-update gallery images"
+          git push
