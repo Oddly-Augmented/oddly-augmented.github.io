@@ -1,6 +1,6 @@
 title: Oddly's Blog
 tagline: A personal blog for recipes, Art, and whatever else I'm into.
-description: Blogs about Recipes, art, and everything in between
+description: A personal blog covering recipes, art, and everyday creativity by Mairekk.
 baseurl: ""
 url: "https://oddly-augmented.github.io"
 
@@ -10,6 +10,7 @@ permalink: /blog/:slug/
 
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
 
 
 paginate: 6

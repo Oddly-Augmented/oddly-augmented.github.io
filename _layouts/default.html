@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{ page.title }} | Oddly</title>
+  <!-- SEO: Unique title per page, falls back to site title -->
+  <title>{% if page.title %}{{ page.title }} | Oddly's Blog{% else %}{{ site.title }}{% endif %}</title>
+
+  <!-- SEO: Unique meta description per page, falls back to site description -->
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 25 }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- SEO: Canonical URL to prevent duplicate content -->
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+  <!-- SEO: Open Graph tags for social sharing -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 25 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  {% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.url }}">{% endif %}
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/index.css">
