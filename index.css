@@ -268,13 +268,13 @@ body{
 .contact-table td {
   padding: 0.65rem 0.9rem;
   text-align: left;
-  border-bottom: 1px solid var(--bg-muted);
+  border-bottom: 1px solid var(--text);
 }
 
 .contact-table th {
   font-weight: 600;
   color: var(--text-accent);
-  border-bottom: 1px solid var(--muted);
+  border-bottom: 1px solid var(--text);
 }
 
 .contact-table tr:last-child td {
@@ -430,7 +430,7 @@ caption{
   font-size: clamp(1.8rem, 2.5vw, 3rem);
   width: fit-content;
   text-align: left;
-  color: var(--text-accent);
+  color: var(--text);
 }
 
 

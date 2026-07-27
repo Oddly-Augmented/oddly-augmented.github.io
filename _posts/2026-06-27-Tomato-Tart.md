@@ -3,12 +3,14 @@ layout: post
 title: "Tomato Tart"
 date: 2026-06-30
 category: Recipes
+description: "A new appetizer for our summer menu. A puff pastry, topped with fresh mozzarella, heirloom tomato, marinated zucchini with Aleppo pepper."
 image: /images/Tomato Tart.jpg
+image_alt: "A puff pastry with tomato, mozzarella, and marinated zucchini."
 card_style: auto
 excerpt: "A flaky puff pastry tart topped with fresh mozzarella, heirloom tomato, and marinated zucchini."
 ---
 <figure class="post-image">
-  <img src="/images/Tomato Tart.jpg" alt="A Tomato Tart">
+  <img src="/images/Tomato Tart.jpg" alt="A puff pastry with tomato, mozzarella, and marinated zucchini. ">
   <figcaption>Summer Menu 2026</figcaption>
 </figure>
 
