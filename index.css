@@ -290,7 +290,7 @@ body{
   text-decoration: underline;
 }
 
-.contact-form {
+/* .contact-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -335,7 +335,7 @@ body{
 
 .contact-form button:hover {
   background: var(--muted);
-}
+} */
 
 /* -------GALLERY------- */
 .gallery-grid {
