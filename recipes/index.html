@@ -3,30 +3,44 @@ layout: default
 title: Recipes
 ---
 
-<div class="page">
+<main class="page">
   <h1>Recipes</h1>
+  <p class="content">A collection of recipes I have made, tested, and saved.</p>
 
-  {% assign recipe_posts = site.posts | where_exp: "post", "post.categories contains 'recipes'" %}
-  {% for post in recipe_posts %}
-    <section class="image-text-card image-hero">
-      <div class="image-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}">
-        {% endif %}
-      </div>
+  <section class="recipe-grid">
+    {% assign recipes = site.recipes | sort: "title" %}
 
-      <div class="text-card">
-        {% if post.tags %}
-          <span class="post-tag">{{ post.tags[0] }}</span>
+    {% for recipe in recipes %}
+      <article class="recipe-card">
+        {% if recipe.image %}
+          <a href="{{ recipe.url | relative_url }}">
+            <img
+              src="{{ recipe.image | relative_url }}"
+              alt="{{ recipe.title }}"
+            >
+          </a>
         {% endif %}
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        {% if post.description %}
-          <p class="content">{{ post.description }}</p>
-        {% endif %}
-        <p class="meta">
-          {{ post.date | date: "%B %d %Y" }}
-        </p>
-      </div>
-    </section>
-  {% endfor %}
-</div>
+
+        <div class="recipe-card-content">
+          <h2>
+            <a href="{{ recipe.url | relative_url }}">
+              {{ recipe.title }}
+            </a>
+          </h2>
+
+          {% if recipe.description %}
+            <p>{{ recipe.description }}</p>
+          {% endif %}
+
+          {% if recipe.tags %}
+            <div class="recipe-tags">
+              {% for tag in recipe.tags %}
+                <span class="recipe-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+</main>
