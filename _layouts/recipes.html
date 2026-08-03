@@ -14,9 +14,7 @@ layout: default
     {% if page.tags %}
     <div class="recipe-tags">
       {% for tag in page.tags %}
-      <span class="recipe-tag recipe-tag-{{ tag | downcase | replace: ' ', '-' }}">
-        {{ tag }}
-      </span>
+        {% include recipe_tag.html tag=tag %}
       {% endfor %}
     </div>
     {% endif %}
