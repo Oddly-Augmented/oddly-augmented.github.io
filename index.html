@@ -6,41 +6,59 @@ description: Welcome to Oddly's Blog — a personal site covering recipes, art, 
 
 <section class="hero">
   <h1>Welcome</h1>
-  <p>A personal blog for recipes, Art, and whatever else I'm into. New posts whenever inspiration hits.</p>
+  <p>A personal blog for recipes, art, and whatever else I'm into. New posts whenever inspiration hits.</p>
 </section>
 
 {% for post in site.posts limit:3 %}
   {% assign card_style = post.card_style | default: 'auto' %}
+
   {% if card_style == 'auto' %}
     {% assign is_even = forloop.index | modulo: 2 %}
+
     {% if is_even == 0 %}
       {% assign layout_class = 'image-text-card reverse' %}
     {% else %}
       {% assign layout_class = 'image-text-card' %}
     {% endif %}
+
   {% elsif card_style == 'image-right' %}
     {% assign layout_class = 'image-text-card reverse' %}
+
   {% elsif card_style == 'text-only' %}
     {% assign layout_class = 'image-text-card text-only' %}
+
   {% elsif card_style == 'image-hero' %}
     {% assign layout_class = 'image-text-card image-hero' %}
+
   {% else %}
     {% assign layout_class = 'image-text-card' %}
   {% endif %}
-<section class="{{ layout_class }}">
-  {% if post.image and card_style != 'text-only' %}
-  <article class="image-card">
-    <!-- SEO: Uses image_alt from front matter if available, falls back to post title -->
-    <img src="{{ post.image }}" alt="{% if post.image_alt %}{{ post.image_alt }}{% else %}{{ post.title }}{% endif %}" loading="lazy">
+
+  <article class="{{ layout_class }}">
+    {% if post.image and card_style != 'text-only' %}
+      <div class="image-card">
+        <img
+          src="{{ post.image | relative_url }}"
+          alt="{{ post.image_alt | default: post.title | escape }}"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+    <div class="text-card">
+      {% include tag.html category=post.category %}
+
+      <h2>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+
+      <p class="content">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </p>
+
+      <p class="meta">
+        {{ post.date | date: "%B %d, %Y" }}
+      </p>
+    </div>
   </article>
-  {% endif %}
-  <article class="text-card">
-    {% include tag.html category=post.category %}
-  <h2>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  </h2>
-    <p class="content">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    <p class="meta">{{ post.date | date: "%B %d %Y" }}</p>
-  </article>
-</section>
 {% endfor %}
