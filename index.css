@@ -459,7 +459,6 @@ body{
 }
 
 /* Recipe tags */
-.post-tag,
 .recipe-tag {
   display: inline-block;
   margin: 0 0 10px;
@@ -470,7 +469,7 @@ body{
   letter-spacing: 0.03em;
   text-transform: uppercase;
   background: color-mix(in srgb, var(--tag-color) 18%, transparent);
-  color: #333;
+  color: var(--tag-color);
   border: 1px solid color-mix(in srgb, var(--tag-color) 35%, transparent);
 
 }
