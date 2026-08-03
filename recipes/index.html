@@ -1,46 +1,39 @@
----
-layout: default
-title: Recipes
----
+<section class="recipe-grid">
+  {% assign recipes = site.recipes | sort: "title" %}
 
-<main class="page">
-  <h1>Recipes</h1>
-  <p class="content">A collection of recipes I have made, tested, and saved.</p>
+  {% for recipe in recipes %}
+    <article class="recipe-card">
+      {% if recipe.image %}
+        <a
+          class="recipe-card-image"
+          href="{{ recipe.url | relative_url }}"
+        >
+          <img
+            src="{{ recipe.image | relative_url }}"
+            alt="{{ recipe.title }}"
+          >
+        </a>
+      {% endif %}
 
-  <section class="recipe-grid">
-    {% assign recipes = site.recipes | sort: "title" %}
-
-    {% for recipe in recipes %}
-      <article class="recipe-card">
-        {% if recipe.image %}
+      <div class="recipe-card-content">
+        <h2>
           <a href="{{ recipe.url | relative_url }}">
-            <img
-              src="{{ recipe.image | relative_url }}"
-              alt="{{ recipe.title }}"
-            >
+            {{ recipe.title }}
           </a>
+        </h2>
+
+        {% if recipe.description %}
+          <p>{{ recipe.description }}</p>
         {% endif %}
 
-        <div class="recipe-card-content">
-          <h2>
-            <a href="{{ recipe.url | relative_url }}">
-              {{ recipe.title }}
-            </a>
-          </h2>
-
-          {% if recipe.description %}
-            <p>{{ recipe.description }}</p>
-          {% endif %}
-
-          {% if recipe.tags %}
-            <div class="recipe-tags">
-              {% for tag in recipe.tags %}
-                <span class="recipe-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
-      </article>
-    {% endfor %}
-  </section>
-</main>
+        {% if recipe.tags %}
+          <div class="recipe-tags">
+            {% for tag in recipe.tags %}
+              <span class="recipe-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>
