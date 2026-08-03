@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Summer Flavors: Blueberry Jam Experiments"
-date: 2026-06-29
-description: "A quick excerpt about my experience making jam, and highlighting my newest jam recipe Blueberry Hibiscus."
 category: Recipes
+date: 2026-06-29
+description: "A quick excerpt about my experience making jam, and highlighting my newest jam recipe Blueberry Hibiscus.'
 image: /images/Jam on toats.jpg
 image_alt: "Blueberry Hibiscus Jam, on a pice of toast topped with raspberries"
 card_style: auto
@@ -43,7 +43,7 @@ The experiment resulted in a wonderful jam and has opened up a whole new realm o
 9. Transfer to a glass jar or container and enjoy within 2 weeks.
 
 
-## A World of Possibilities
+## World of Possibilities
 
 This method has opened up a world of different jam flavors. By starting with an infused simple syrup and cooking fruit down into it, I can build surprisingly complex flavors from scratch. Some of the jams I'm currently working on:
 

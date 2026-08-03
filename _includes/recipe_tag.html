@@ -1,0 +1,69 @@
+{% assign tag = include.tag | downcase %}
+
+<!-- Strawberry Red -->
+{% if tag == 'appetizer' or tag == 'starter' %}
+  {% assign tag_color = '#f94144' %}
+
+<!-- Pumpkin Spice -->
+{% elsif tag == 'jam' or tag == 'jelly' %}
+  {% assign tag_color = '#f3722c' %}
+
+<!-- Carrot Orange -->
+{% elsif tag == 'jam' or tag == 'jelly' %}
+  {% assign tag_color = '#f8961e' %}
+
+<!-- Atomic Tangerine -->
+{% elsif tag == 'sauce' %}
+  {% assign tag_color = '#f9844a' %}
+
+<!-- Tuscan Sun -->
+{% elsif tag == 'dressing' %}
+  {% assign tag_color = '#f9c74f' %}
+
+<!-- Willow Green -->
+{% elsif tag == 'entree' or tag == 'entrée' %}
+  {% assign tag_color = '#90be6d' %}
+
+<!-- Seaweed -->
+{% elsif tag == 'dessert' %}
+  {% assign tag_color = '#43aa8b' %}
+
+          <!-- UNUSED -->
+
+<!-- Dark Cyan -->
+{% elsif cat == 'TEMP00' %}
+  {% assign tag_color = '#4d908e' %}
+
+<!-- Blue Slate -->
+{% elsif cat == 'TEMP0' %}
+  {% assign tag_color = '#577590' %}
+
+<!-- Cerulean -->
+{% elsif cat == 'TEMP1' %}
+    {% assign tag_color = '#277da1' %}
+
+<!-- Royal Amethyst (Purple) -->
+{% elsif cat == 'TEMP2' %}
+    {% assign tag_color = '#7209b7' %}
+
+<!-- Lavender Dream (Light Purple) -->
+{% elsif cat == 'TEMP3' %}
+    {% assign tag_color = '#9d4edd' %}
+
+<!-- Neon Magenta (Vibrant Pink) -->
+{% elsif cat == 'TEMP4' %}
+    {% assign tag_color = '#f72585' %}
+
+<!-- Rose Pink (Soft Pink) -->
+{% elsif cat == 'TEMP5' %}
+    {% assign tag_color = '#ff70a6' %}
+
+
+<!-- WHITE -->
+{% else %}
+  {% assign tag_color = '#e0e0e0' %}
+{% endif %}
+
+<span class="recipe-tag" style="--tag-color: {{ tag_color }};">
+  {{ include.tag }}
+</span>

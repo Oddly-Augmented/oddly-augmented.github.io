@@ -4,6 +4,10 @@ description: A personal blog covering recipes, art, and everyday creativity by M
 baseurl: ""
 url: "https://oddly-augmented.github.io"
 
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:name/
 
 permalink: /blog/:slug/
 
