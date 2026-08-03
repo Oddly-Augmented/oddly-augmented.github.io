@@ -3,13 +3,30 @@ layout: default
 title: Recipes
 ---
 
-<h1>Recipes</h1>
+<div class="page">
+  <h1>Recipes</h1>
 
-<ul>
-  {% for recipe in site.recipes %}
-    <li>
-      <a href="{{ recipe.url }}">{{ recipe.title }}</a>
-      <p>{{ recipe.summary }}</p>
-    </li>
+  {% assign recipe_posts = site.posts | where_exp: "post", "post.categories contains 'recipes'" %}
+  {% for post in recipe_posts %}
+    <section class="image-text-card image-hero">
+      <div class="image-card">
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}">
+        {% endif %}
+      </div>
+
+      <div class="text-card">
+        {% if post.tags %}
+          <span class="post-tag">{{ post.tags[0] }}</span>
+        {% endif %}
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.description %}
+          <p class="content">{{ post.description }}</p>
+        {% endif %}
+        <p class="meta">
+          {{ post.date | date: "%B %d %Y" }}
+        </p>
+      </div>
+    </section>
   {% endfor %}
-</ul>
+</div>

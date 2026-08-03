@@ -10,13 +10,7 @@ card_style: auto
 excerpt: Simple fermented garlic dill pickles.
 tags:
   - Fermentation
-  - Appetizer
 ---
-
-<figure class="post-image">
-  <img src="/images/garlic-dill-pickles.jpg" alt="Jar of garlic dill pickles">
-  <figcaption>Garlic Dill Pickles</figcaption>
-</figure>
 
 ## Ingredients
 
