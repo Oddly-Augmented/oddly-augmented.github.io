@@ -629,3 +629,45 @@ caption{
     padding:0 20px;
   }
 }
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 24px 20px 16px;
+  }
+
+  .header-bar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    justify-items: center;
+  }
+
+  .nav {
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .nav a,
+  .logo {
+    font-size: 15px;
+  }
+
+  .page {
+    margin: 24px auto 48px;
+    padding: 0 16px;
+  }
+
+  .gallery-grid {
+    columns: 1 260px;
+  }
+
+  .recipe-page {
+    margin: 0 12px;
+    padding: 1.25rem;
+  }
+
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}

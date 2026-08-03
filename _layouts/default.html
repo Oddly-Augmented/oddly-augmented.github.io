@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SEO: Unique title per page, falls back to site title -->
-  <title>{% if page.title %}{{ page.title }} | Oddly's Blog{% else %}{{ site.title }}{% endif %}</title>
-
-  <!-- SEO: Unique meta description per page, falls back to site description -->
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 25 }}{% else %}{{ site.description }}{% endif %}">
-
-  <!-- SEO: Canonical URL to prevent duplicate content -->
-  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-
-  <!-- SEO: Open Graph tags for social sharing -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 25 }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:url" content="{{ page.url | prepend: site.url }}">
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  {% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.url }}">{% endif %}
-
   <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/index.css">
+
+  <title>
+    {% if page.title %}
+      {{ page.title }} | Oddly's Blog
+    {% else %}
+      {{ site.title | default: "Oddly's Blog" }}
+    {% endif %}
+  </title>
+
+  <meta
+    name="description"
+    content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncatewords: 25 | escape }}"
+  >
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta
+    property="og:title"
+    content="{{ page.title | default: site.title | default: "Oddly's Blog" | escape }}"
+  >
+  <meta
+    property="og:description"
+    content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncatewords: 25 | escape }}"
+  >
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+
+  {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/index.css' | relative_url }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Serif:wdth,wght@80,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Serif:wdth,wght@80,600&display=swap"
+    rel="stylesheet"
+  >
 </head>
+
 <body>
   <div class="viewport">
     <header class="site-header">
       <nav class="header-bar">
         <div class="nav-box nav-left">
           <ul class="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/recipes/">Recipes</a></li>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/recipes/' | relative_url }}">Recipes</a></li>
           </ul>
         </div>
-        <a href="/" class="logo">Oddly</a>
+
+        <a href="{{ '/' | relative_url }}" class="logo">Oddly</a>
+
         <div class="nav-box nav-right">
           <ul class="nav nav-right-links">
-            <li><a href="/gallery/">Gallery</a></li>
-            <li><a href="/contact/">Contact </a></li>
+            <li><a href="{{ '/gallery.html' | relative_url }}">Gallery</a></li>
+            <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main class="page">
       {{ content }}
     </main>
