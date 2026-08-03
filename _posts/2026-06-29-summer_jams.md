@@ -43,7 +43,7 @@ The experiment resulted in a wonderful jam and has opened up a whole new realm o
 9. Transfer to a glass jar or container and enjoy within 2 weeks.
 
 
-## A World of Possibilities
+## World of Possibilities
 
 This method has opened up a world of different jam flavors. By starting with an infused simple syrup and cooking fruit down into it, I can build surprisingly complex flavors from scratch. Some of the jams I'm currently working on:
 
