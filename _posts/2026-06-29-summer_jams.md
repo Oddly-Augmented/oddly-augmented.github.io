@@ -9,13 +9,14 @@ image_alt: "Blueberry Hibiscus Jam, on a pice of toast topped with raspberries"
 card_style: auto
 excerpt: "Fresh summer flavors — Blueberry Hibiscus Jam"
 ---
+
 <figure class="post-image">
   <img src="/images/Jam on toats.jpg" alt="Blueberry Hibiscus Jam, on a pice of toast topped with raspberries">
   <figcaption>Jam On Toast</figcaption>
 </figure>
 
 ## Jam Experiments
----
+
 Two years ago I was put in charge of making jams at work, and since then I've made countless different types. This month I decided to try something new — I made a hibiscus simple syrup, reduced it down, then cooked blueberries directly in it. This process is similar to candying fruit, where the sugar syrup slowly draws out moisture and concentrates flavor.
 
 The experiment resulted in a wonderful jam and has opened up a whole new realm of possibilities.

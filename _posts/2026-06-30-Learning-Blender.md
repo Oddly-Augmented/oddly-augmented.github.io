@@ -2,7 +2,7 @@
 layout: post
 title: "Learning Blender (Again)"
 date: 2026-06-30
-description:
+description: Trying to learn Blender again.
 category: Art
 image: /images/Blender lowpoly.png
 image_alt: "Low poly render of 2 traffic cones and a fire hydrant made in Blender"
