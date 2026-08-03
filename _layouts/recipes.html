@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="recipe-page">
+
+  <header class="recipe-header">
+    <h1 class="recipe-title">{{ page.title }}</h1>
+
+    {% if page.description %}
+    <p class="recipe-description">{{ page.description }}</p>
+    {% endif %}
+
+    {% if page.tags %}
+    <div class="recipe-tags">
+      {% for tag in page.tags %}
+      <span class="recipe-tag recipe-tag-{{ tag | downcase | replace: ' ', '-' }}">
+        {{ tag }}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.image %}
+  <figure class="recipe-image">
+    <img src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}">
+    {% if page.image_alt %}
+    <figcaption>{{ page.image_alt }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
+
+  <section class="recipe-content">
+    {{ content }}
+  </section>
+
+</article>

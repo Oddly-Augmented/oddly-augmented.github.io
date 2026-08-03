@@ -1,12 +1,16 @@
 ---
-layout: post
+layout: recipes
 title: "Garlic Dill Pickles"
 date: 2026-07-15
+description: "Simple fermented garlic dill pickles."
 category: Recipes
 image: /images/garlic-dill-pickles.jpg
 image_alt: "Jar of garlic dill pickles"
 card_style: auto
 excerpt: Simple fermented garlic dill pickles.
+tags:
+  - Fermentation
+  - Appetizer
 ---
 
 <figure class="post-image">
