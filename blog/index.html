@@ -1,39 +1,66 @@
 ---
 layout: default
 title: Blog
-description: A page with all of my blog posts
+description: Recent posts about recipes, art, Blender, and other projects from Oddly.
 ---
+
+<header class="hero">
+  <h1>Blog</h1>
+  <p>Recent posts about recipes, art, projects, and whatever else I’m working on.</p>
+</header>
+
 {% for post in site.posts %}
   {% assign card_style = post.card_style | default: 'auto' %}
+
   {% if card_style == 'auto' %}
     {% assign is_even = forloop.index | modulo: 2 %}
+
     {% if is_even == 0 %}
       {% assign layout_class = 'image-text-card reverse' %}
     {% else %}
       {% assign layout_class = 'image-text-card' %}
     {% endif %}
+
   {% elsif card_style == 'image-right' %}
     {% assign layout_class = 'image-text-card reverse' %}
+
   {% elsif card_style == 'text-only' %}
     {% assign layout_class = 'image-text-card text-only' %}
+
   {% elsif card_style == 'image-hero' %}
     {% assign layout_class = 'image-text-card image-hero' %}
+
   {% else %}
     {% assign layout_class = 'image-text-card' %}
   {% endif %}
 
-  <section class="{{ layout_class }}">
+  <article class="{{ layout_class }}">
     {% if post.image and card_style != 'text-only' %}
-      <article class="image-card">
-        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-      </article>
+      <div class="image-card">
+        <img
+          src="{{ post.image | relative_url }}"
+          alt="{{ post.image_alt | default: post.title | escape }}"
+          loading="lazy"
+        >
+      </div>
     {% endif %}
 
-    <article class="text-card">
+    <div class="text-card">
       {% include tag.html category=post.category %}
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="content">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
-    </article>
-  </section>
+
+      <h2>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <p class="content">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </p>
+
+      <p class="meta">
+        {{ post.date | date: "%B %d, %Y" }}
+      </p>
+    </div>
+  </article>
 {% endfor %}
