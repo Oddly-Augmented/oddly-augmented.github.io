@@ -4,7 +4,7 @@ title: "Blueberry Hibiscus Jam"
 date: 2026-07-15
 description: "Simple Blueberry Hibiscus Jam"
 category: Recipes
-image: images/Jam on toats.jpg
+image: images/Jam_on_toats.jpg
 image_alt: "Blueberry Hibiscus Jam, on a pice of toast topped with raspberries"
 card_style: auto
 excerpt: Simple Blueberry Hibiscus Jam

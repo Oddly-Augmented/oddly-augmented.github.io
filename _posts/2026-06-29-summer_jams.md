@@ -4,14 +4,14 @@ title: "Summer Flavors: Blueberry Jam Experiments"
 category: Recipes
 date: 2026-06-29
 description: "A quick excerpt about my experience making jam, and highlighting my newest jam recipe Blueberry Hibiscus."
-image: /images/Jam on toats.jpg
+image: /images/Jam_on_toats.jpg
 image_alt: "Blueberry Hibiscus Jam, on a pice of toast topped with raspberries"
 card_style: auto
 excerpt: "Fresh summer flavors — Blueberry Hibiscus Jam"
 ---
 
 <figure class="post-image">
-  <img src="/images/Jam on toats.jpg" alt="Blueberry Hibiscus Jam, on a pice of toast topped with raspberries">
+  <img src="/images/Jam_on_toats.jpg" alt="Blueberry Hibiscus Jam, on a pice of toast topped with raspberries">
   <figcaption>Jam On Toast</figcaption>
 </figure>
 

@@ -4,14 +4,14 @@ title: "Learning Blender (Again)"
 date: 2026-06-30
 description: Trying to learn Blender again.
 category: Art
-image: /images/Blender lowpoly.png
+image: /images/Blender_lowpoly.png
 image_alt: "Low poly render of 2 traffic cones and a fire hydrant made in Blender"
 card_style: auto
 excerpt: Trying to learn Blender again.
 ---
 
 <figure class="post-image">
-  <img src="/images/Blender lowpoly.png" alt="Low poly render of 2 traffic cones and a fire hydrant made in Blender">
+  <img src="/images/Blender_lowpoly.png" alt="Low poly render of 2 traffic cones and a fire hydrant made in Blender">
   <figcaption>Low-Poly Render</figcaption>
 </figure>
 
